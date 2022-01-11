@@ -1,6 +1,10 @@
-let age = prompt("How old are you?");
-if (age >= 18) {
-  alert("You can apply to SheCodes");
+let currentHour = prompt("What time is it?");
+if (currentHour < 12) {
+  alert("Good Morning");
 } else {
-  alert("You can't apply");
+  if (currentHour > 18) {
+    alert("Good Evening");
+  } else {
+    alert("Good Afternoon");
+  }
 }
