@@ -1,14 +1,13 @@
-function canSpeakPortuguese() {
-  let country = prompt("What country are you from?");
-  country = country.toLowerCase();
-  country = country.trim();
-  country = country.replace("brasil", "brazil");
-
-  if (country === "portugal" || country === "brazil") {
-    alert("You speak Portuguese");
+function personalInfo() {
+  let name = prompt("What's your name?");
+  let age = prompt("How old are you?");
+  let h1 = document.querySelector("h1");
+  if (age >= 18) {
+    h1.innerHTML = `Hi, ${name}! Welcome to SheCodes!`;
   } else {
-    alert("You don't speak Portuguese");
+    h1.innerHTML = `Sorry, ${name}. You cannot join SheCodes`;
   }
 }
 
-canSpeakPortuguese();
+let searchButton = document.querySelector("button");
+searchButton.addEventListener("click", personalInfo);
