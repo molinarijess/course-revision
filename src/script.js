@@ -1,10 +1,10 @@
-let currentHour = prompt("What time is it?");
-if (currentHour < 12) {
-  alert("Good Morning");
+let country = prompt("What country are you from?");
+country = country.toLowerCase();
+country = country.trim();
+country = country.replace("brasil", "brazil");
+
+if (country === "portugal" || country === "brazil") {
+  alert("You speak Portuguese");
 } else {
-  if (currentHour > 18) {
-    alert("Good Evening");
-  } else {
-    alert("Good Afternoon");
-  }
+  alert("You don't speak Portuguese");
 }
