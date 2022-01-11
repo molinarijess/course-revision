@@ -1,13 +1,14 @@
-function personalInfo() {
-  let name = prompt("What's your name?");
-  let age = prompt("How old are you?");
-  let h1 = document.querySelector("h1");
-  if (age >= 18) {
-    h1.innerHTML = `Hi, ${name}! Welcome to SheCodes!`;
+function displayTemperature() {
+  let city = prompt("What city are you in?");
+  let temperature = prompt("What's the current temperature?");
+  let emoji = document.querySelector("h1");
+
+  if (temperature > 0) {
+    emoji.innerHTML = `☀️ <div class="title"> Currently ${temperature}º in ${city}</div>`;
   } else {
-    h1.innerHTML = `Sorry, ${name}. You cannot join SheCodes`;
+    emoji.innerHTML = `❄️ <div class="title"> Currently ${temperature}º in ${city}</div>`;
   }
 }
 
-let searchButton = document.querySelector("button");
-searchButton.addEventListener("click", personalInfo);
+let searchCityButton = document.querySelector("button");
+searchCityButton.addEventListener("click", displayTemperature);
