@@ -6,7 +6,12 @@ function displayTemperature() {
   if (temperature > 0) {
     emoji.innerHTML = `☀️ <div class="title"> Currently ${temperature}º in ${city}</div>`;
   } else {
-    emoji.innerHTML = `❄️ <div class="title"> Currently ${temperature}º in ${city}</div>`;
+    if (city.length === 0 || temperature.length === 0) {
+      emoji.innerHTML = `🌤
+        <div class="title">Currently 21º in Tokyo</div>`;
+    } else {
+      emoji.innerHTML = `❄️ <div class="title"> Currently ${temperature}º in ${city}</div>`;
+    }
   }
 }
 
